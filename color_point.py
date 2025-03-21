@@ -13,20 +13,22 @@ class ColorPoint(Point):
     def __str__(self):
         return f"<{self.x}, {self.y}>({self.color})"
 
-color_points = []
-colors = ["red", "blue", "green", "yellow", "black", "white", "purple"]
-for _ in range(5):
-    p = ColorPoint(
-        random.randint(-100, 100),
-        random.randint(-100, 100),
-        random.choice(colors))
-    color_points.append(p)
 
-print("random color points:")
-print(color_points)
-color_points.sort()
-print("color points in order:")
-print(color_points)
+if __name__ == "__main__": # To make sure this code does not run when importing
+    color_points = []
+    colors = ["red", "blue", "green", "yellow", "black", "white", "purple"]
+    for _ in range(5):
+        p = ColorPoint(
+            random.randint(-100, 100),
+            random.randint(-100, 100),
+            random.choice(colors))
+        color_points.append(p)
+
+    print("random color points:")
+    print(color_points)
+    color_points.sort()
+    print("color points in order:")
+    print(color_points)
 
 
 
