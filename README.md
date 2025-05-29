@@ -1,2 +1,2 @@
-# Content of sessions 1-5
-# Includes docstrings
+# 1. Content of sessions 1-5
+# 2. Includes docstrings
