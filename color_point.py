@@ -11,6 +11,12 @@ class ColorPoint(Point):
         self.color = color
 
     def __str__(self):
+        """
+        Returns a user-friendly string representation of the object,
+        showing the point's coordinates and color in the format: <x, y>(color).
+
+        :return: Formatted string representing the point
+        """
         return f"<{self.x}, {self.y}>({self.color})"
 
 

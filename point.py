@@ -23,9 +23,18 @@ class Point:
         return f"<{self.x}, {self.y}>"
 
     def __repr__(self):
+        """
+        Returns a string representation of the object for debugging purposes.
+        Calls the __str__ method for consistency.
+        :return: String representation of the object
+        """
         return self.__str__()
 
     def distance_orig(self):
+        """
+        Computes the Euclidean distance from the origin (0, 0) to the point (x, y).
+        :return: Distance from the origin as a float
+        """
         return (self.x**2 + self.y**2)**0.5
 
     def __gt__(self, other):
@@ -36,6 +45,13 @@ class Point:
         """
         return self.distance_orig() > other.distance_orig()
     def __eq__(self, other):
+        """
+        Magic method to compare two points using the '==' operator.
+        Checks whether the distances from the origin are equal.
+
+        :param other: Another object with x and y attributes
+        :return: True if both points are equidistant from the origin, False otherwise
+        """
         return self.distance_orig() == other.distance_orig()
 
 if __name__=="__main__":
